@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.neppplus.viewpager_20210327.R
 
-class page2Fragment : Fragment() {
+class Page1Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_page2, container, false)
+        return inflater.inflate(R.layout.fragment_page1, container, false)
     }
 
 }
