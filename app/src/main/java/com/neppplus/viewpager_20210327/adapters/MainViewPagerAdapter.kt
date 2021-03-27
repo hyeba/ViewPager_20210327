@@ -8,6 +8,24 @@ import com.neppplus.viewpager_20210327.fragments.Page2Fragment
 import com.neppplus.viewpager_20210327.fragments.Page3Fragment
 
 class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
+
+//    position에 따른 페이지의 제목 리턴
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        if (position == 0) {
+            return "인사"
+        }
+
+        else if (position == 1) {
+            return "자기소개"
+        }
+
+        else {
+            return "하고싶은말"
+        }
+
+    }
+
     override fun getItem(position: Int): Fragment {
 
 //        position의 값에 따라 다른 Fragment 리턴
