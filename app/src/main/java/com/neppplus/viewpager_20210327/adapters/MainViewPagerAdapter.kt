@@ -12,16 +12,13 @@ class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 //    position에 따른 페이지의 제목 리턴
 
     override fun getPageTitle(position: Int): CharSequence? {
-        if (position == 0) {
-            return "인사"
-        }
 
-        else if (position == 1) {
-            return "자기소개"
-        }
+//        리턴을 하는데 -> position 값에 따라 다른 결과가 리턴되도록 하는 코틀린 문법 예시
 
-        else {
-            return "하고싶은말"
+        return when(position){
+            0 -> "인사"
+            1 -> "자기소개"
+            else -> "하고싶은말"
         }
 
     }
@@ -30,16 +27,11 @@ class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
 //        position의 값에 따라 다른 Fragment 리턴
 
-        if (position == 0) {
-            return Page1Fragment()
+        return when(position){
+            0 -> Page1Fragment()
+            1 -> Page2Fragment()
+            else -> Page3Fragment()
 
-        }
-        else if (position == 1) {
-            return Page2Fragment()
-        }
-
-        else{
-            return Page3Fragment()
         }
 
     }
